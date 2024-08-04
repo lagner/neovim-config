@@ -101,4 +101,10 @@ return {
         -- Text object
         -- map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
     end,
+
+    lazygit_keys = function()
+        return {
+            { "_", "<CMD>LazyGit<CR>", desc = "Open lazygit", },
+        }
+    end,
 }
