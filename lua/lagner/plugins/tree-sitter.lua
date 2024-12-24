@@ -24,6 +24,7 @@ return {
 			"rust",
 			"kotlin",
 			"groovy",
+			"just",
 		},
 		incremental_selection = {
 			enable = true,
