@@ -16,6 +16,7 @@ return {
         keymap.set('n', '<leader>ff', telescope.find_files, {})
         keymap.set('n', '<leader>fg', telescope.live_grep, {})
         keymap.set('n', '<leader>fb', telescope.buffers, {})
+        keymap.set('n', '<leader>fm', telescope.marks, {})
         keymap.set('n', '<leader>fh', telescope.help_tags, {})
     end,
 
@@ -92,7 +93,7 @@ return {
         map('n', '<leader>hS', gitsigns.stage_buffer)
         map('n', '<leader>hR', gitsigns.reset_buffer)
         map('n', '<leader>hp', gitsigns.preview_hunk)
-        -- map('n', '<leader>hb', function() gitsigns.blame_line{full=true} end)
+        map('n', '<leader>hb', function() gitsigns.blame_line{full=true} end)
         -- map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
         -- map('n', '<leader>hd', gitsigns.diffthis)
         -- map('n', '<leader>hD', function() gitsigns.diffthis('~') end)
