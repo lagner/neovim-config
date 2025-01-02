@@ -10,10 +10,10 @@ opt.shiftwidth = 4
 opt.tabstop = 4
 
 opt.wrap = true
-opt.showmatch = true 
-opt.hlsearch = true 
-opt.ignorecase = true 
-opt.smartcase = true 
+opt.showmatch = true
+opt.hlsearch = true
+opt.ignorecase = true
+opt.smartcase = true
 opt.numberwidth = 4
 opt.number = true
 opt.relativenumber = true
@@ -28,16 +28,3 @@ vim.api.nvim_create_autocmd({"FileType"}, {
         vim.opt.expandtab = false
     end,
 })
-
--- почему то не работает (
--- vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
---     pattern = {"*.jenkinsfile"},
---     callback = function()
---         if vim.fn.search("{{.\\+}}", "nw") ~= 0 then
---             local file_buffer = vim.api.nvim_get_current_buf()
---             vim.api.nvim_set_option_value("filetype", "groovy", {
---                 buf = file_buffer
---             })
---         end
---     end
--- })
